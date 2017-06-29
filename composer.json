@@ -1,0 +1,20 @@
+{
+    "name" : "LeoX/WebPayPlusBundle",
+    "version": "v1.0.0",
+    "type" : "symfony-bundle",
+    "description" : "Ready to make an easy integration to WebPay Plus in Symfony2",
+    "authors" : [{ "name" : "Leonel Hernández López", "email" : "leohernandez2013@gmail.com" }],
+    "keywords" : [ "WebPay Plus", "Transbank", "Payment Type", "Payment gateway" ],
+    "license" : [ "MIT" ],
+    "require" : {
+        "php": ">=5.4",
+        "symfony/framework-bundle": ">=2.3",
+        "symfony/symfony": ">=2.3"
+    },
+    "minimum-stability": "dev",
+    "autoload" : {
+        "psr-4" : {
+            "LeoX\\WebPayPlusBundle\\" : ""
+        }
+    }
+}
