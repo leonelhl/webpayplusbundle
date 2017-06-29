@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Prueba WS - Datos de Entrada Servicio de Anulacion</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend><b>Datos de Transacci&oacute;n</b></legend>
+            <form method="post" action="{{path('demo_webpay_nullify_nullify')}}">
+                <table>
+                    <tr>
+                        <td><label for="buyOrder">BuyOrder</label></td>
+                        <td><input id="buyOrder" type="text" name="buyOrder" value="{{buyOrder}}" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="rebackamount">Reback Amount</label></td>
+                        <td><input id="rebackamount" type="text" name="rebackamount" value="{{rebackamount}}" /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" name="enviar" value="Enviar" /></td>
+                    </tr>
+                </table>
+            </form>
+        </fieldset>
+
+    </body>
+</html>

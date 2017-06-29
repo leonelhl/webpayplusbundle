@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Resultado de Transacci&oacute;n</title>
+    </head>
+    <body>
+        {% if error is empty %}
+            <fieldset>
+                <legend><b>Resultado de Transacci&oacute;n</b></legend>
+                C&oacute;digo Autorizaci&oacute;n: {{authorizationCode}}<br />
+                Tipo de Pago C&oacute;digo: {{paymentTypeCode}}<br />
+                C&oacute;digo de respuesta: {{responseCode}}<br />
+                Cantidad: {{amount}}<br />
+                C&oacute;digo de Comercio: {{commerceCode}}<br />
+                Orden de compra: {{buyOrder}}
+            </fieldset>
+            <form method="post" action="{{url}}">
+                <input type="hidden" name="token_ws" value="{{token}}" />
+                <input type="submit" name="acknowledge" value="Continuar" />
+            </form>
+        {% else %}
+            <h2>{{error}}</h2>
+        {% endif %}
+    </body>
+</html>

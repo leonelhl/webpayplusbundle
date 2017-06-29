@@ -1,0 +1,7 @@
+demo_webpay_nullify_anular:
+    path:     /
+    defaults: { _controller: WebPayPlusBundle:DemoWebPayPlusNullify:anular }
+
+demo_webpay_nullify_nullify:
+    path:     /nullify
+    defaults: { _controller: WebPayPlusBundle:DemoWebPayPlusNullify:nullify }

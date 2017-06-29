@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Prueba WS - Datos de Entrada y datos de salida</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend><b>Datos de Transacci&oacute;n</b></legend>
+            <form method="post" action="{{path('demo_webpay_initTransaction')}}">
+                <table>
+                    <tr>
+                        <td><label for="moneda">Moneda (USD/CLP)</label></td>
+                        <td><select id="moneda" name="moneda" ><option value="CLP">CLP</option><option value="USD">USD</option></select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="buyOrder">Orden de Compra</label></td>
+                        <td><input id="buyOrder" type="text" name="buyOrder" value="{{buyOrder}}" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="amount">Cantidad</label></td>
+                        <td><input id="amount" type="text" name="amount" value="{{amount}}" /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" name="enviar" value="Enviar" /></td>
+                    </tr>
+                </table>
+            </form>
+        </fieldset>
+
+    </body>
+</html>

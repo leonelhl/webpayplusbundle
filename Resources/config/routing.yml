@@ -1,0 +1,7 @@
+transbank_webpay_demo:
+    resource: "@WebPayPlusBundle/Resources/config/routing/webpay_demo.yml"
+    prefix:   /webpay-demo
+
+transbank_webpay_demonullify:
+    resource: "@WebPayPlusBundle/Resources/config/routing/webpay_demonullify.yml"
+    prefix:   /webpay-demo-nullify

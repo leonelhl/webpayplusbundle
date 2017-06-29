@@ -1,0 +1,17 @@
+parameters:
+    webpay.commercecode.USD: '597020000551'
+    webpay.commercecode.CLP: '597020000541'
+    webpay.transactiontype: 'TR_NORMAL_WS'
+    webpay.api: 'https://webpay3gint.transbank.cl/WSWebpayTransaction/cxf/WSWebpayService?wsdl'
+    webpay.apiNullify: 'https://webpay3gint.transbank.cl/WSWebpayTransaction/cxf/WSCommerceIntegrationService?wsdl'
+    webpay.ruteresult: 'demo_webpay_getTransactionResult'
+    webpay.rutefinal: 'demo_webpay_final'
+
+services:
+    webpay_normal:
+        class: LeoX\WebPayPlusBundle\Services\WebPay
+        arguments: [@service_container]
+
+    webpay_nullify:
+        class: LeoX\WebPayPlusBundle\Services\WebPayNullify
+        arguments: [@service_container]

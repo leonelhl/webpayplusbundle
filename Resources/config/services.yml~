@@ -1,0 +1,32 @@
+parameters:
+#    travel_agency_security.example.class: TavelAgency\SecurityBundle\Example
+
+services:
+ #   loginbackend_listener:
+ #       class: TavelAgency\UsuarioBundle\Listener\LoginBackendListener
+ #       arguments: ["@router"]
+ #       tags:
+ #           - { name: kernel.event_listener, event: security.interactive_login }
+ #           - { name: kernel.event_listener, event: kernel.response }
+
+#    travel_agency_security.example:
+#        class: %travel_agency_security.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+#    security.authentication.switchuser_listener:
+#        class: TravelAgency\UsuarioBundle\Listener\SwitchUserListener
+#        tags:
+#            - { name: kernel.event_listener, event: security.switch_user, method: onSecuritySwitchUser }
+#
+    login_listener:
+        class:  TravelAgency\UsuarioBundle\Listener\LoginListener
+        arguments: ['@security.authorization_checker', '@router', '@doctrine', '@service_container']
+        tags:
+            - { name: kernel.event_listener, event: security.interactive_login, method: onSecurityInteractiveLogin, priority: 255 }
+            - { name: kernel.event_listener, event: kernel.response }
+#            - { name: kernel.event_listener, event: security.interactive_login, method: setLocaleForAuthenticatedUser }
+
+#    locale_listener:
+#        class: TravelAgency\UsuarioBundle\Listener\LocaleListener
+#        arguments: ["%kernel.default_locale%"]
+#        tags:
+#            - { name: kernel.event_subscriber }

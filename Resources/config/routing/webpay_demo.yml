@@ -1,0 +1,17 @@
+demo_webpay_compra:
+    path:     /
+    defaults: { _controller: WebPayPlusBundle:DemoWebPayPlus:compra }
+
+demo_webpay_final:
+    path:     /final
+    defaults: { _controller: WebPayPlusBundle:DemoWebPayPlus:final }
+
+demo_webpay_initTransaction:
+    path:     /initTransaction
+    defaults: { _controller: WebPayPlusBundle:DemoWebPayPlus:initTransaction }
+    methods:  [POST]
+
+demo_webpay_getTransactionResult:
+    path:     /transactionResult
+    defaults: { _controller: WebPayPlusBundle:DemoWebPayPlus:transactionResult }
+    methods:  [GET,POST]

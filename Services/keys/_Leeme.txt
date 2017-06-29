@@ -1,0 +1,6 @@
+
+El archivo private.X.key es la llave privada del comercio, que es usada para firmar los request
+El archivo public.X.crt es el certificado p�blico del comercio que esta previamente cargado en el ambiente de integraci�n.
+El archivo public-tbk.X.crt es el certificado p�blico de Transbank para su ambiente de integraci�n.
+
+/*CCRR 2016 - SVM */

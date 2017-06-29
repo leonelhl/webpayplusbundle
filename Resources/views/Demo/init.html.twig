@@ -1,0 +1,13 @@
+<fieldset>
+    <legend><b>Respuesta del servicio</b></legend>
+    Token Webpay: {{tokenWebpay}}<br />
+    Url Redirección: {{urlRedirect}}
+    {% if error is empty %}
+        <form method="post" action="{{urlRedirect}}">
+            <input type="hidden" name="token_ws" value="{{tokenWebpay}}" />
+            <input type="submit" value="Direccionar a Webpay" />
+        </form>
+    {% else %}
+        {{error}}   
+    {% endif %}
+</fieldset>
