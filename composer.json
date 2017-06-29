@@ -11,7 +11,7 @@
         "symfony/framework-bundle": ">=2.3",
         "symfony/symfony": ">=2.3"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload" : {
         "psr-4" : {
             "LeoX\\WebPayPlusBundle\\" : ""
