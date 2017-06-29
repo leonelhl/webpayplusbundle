@@ -1,5 +1,5 @@
 {
-    "name" : "LeoX/WebPayPlusBundle",
+    "name" : "leox/webpayplus-bundle",
     "version": "v1.0.0",
     "type" : "symfony-bundle",
     "description" : "Ready to make an easy integration to WebPay Plus in Symfony2",
